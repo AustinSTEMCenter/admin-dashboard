@@ -3,12 +3,14 @@ import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
 import {
   ArrowUpRight,
+  ArrowRight,
   FileSpreadsheet,
   FileText,
   FolderOpen,
   ListChecks,
   MapPin,
   Search,
+  UsersRound,
   type LucideIcon,
 } from "lucide-react";
 
@@ -480,6 +482,32 @@ export default async function Dashboard() {
             </div>
           </div>
         </header>
+
+        <Link
+          href="/events/grand-opening"
+          className="group flex flex-col justify-between gap-5 border border-chart-2 border-l-4 bg-card p-5 transition-colors hover:bg-secondary sm:flex-row sm:items-center sm:p-6"
+        >
+          <div className="flex items-start gap-4">
+            <div className="flex size-11 shrink-0 items-center justify-center bg-chart-2 text-white">
+              <UsersRound className="size-5" aria-hidden="true" />
+            </div>
+            <div>
+              <p className="font-mono text-[11px] uppercase tracking-widest text-chart-2">
+                Live event operations
+              </p>
+              <h2 className="mt-1 text-lg font-semibold uppercase tracking-widest">
+                Grand Opening guest dashboard
+              </h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Headcount, registration activity, priority guest review, and follow-up flags.
+              </p>
+            </div>
+          </div>
+          <span className="inline-flex items-center gap-2 self-end text-xs font-semibold uppercase tracking-widest sm:self-auto">
+            Open dashboard
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+          </span>
+        </Link>
 
         <section className="border border-border border-t-2 border-t-foreground bg-card p-5 text-card-foreground sm:p-6">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
