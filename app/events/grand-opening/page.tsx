@@ -404,6 +404,13 @@ export default async function GrandOpeningDashboard() {
               </div>
             </div>
             <div className="flex items-center gap-3 self-end sm:self-auto">
+              <Link
+                href="/events/grand-opening/check-in"
+                className="inline-flex items-center gap-2 border border-foreground px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest transition-colors hover:bg-foreground hover:text-background"
+              >
+                Door check-in counter
+                <ArrowUpRight className="size-3.5" aria-hidden="true" />
+              </Link>
               <span className="hidden font-mono text-[11px] uppercase tracking-widest text-muted-foreground sm:inline">
                 Internal only
               </span>
